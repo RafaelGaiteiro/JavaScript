@@ -19,9 +19,14 @@ const winningConditions = [
 
 ];
 
-function handleCellPlayed(clickedCell, clickedCellIndex) {
-    gameState[clickedCellIndex] = currentPlayer;
+function handleCellPlayed(clickedCell, clickedCellIndex){
+    gameState[clickedCellIndex] = currentPlayer;   
     clickedCell.innerHTML = currentPlayer;
+    if (currentPlayer === "X"){
+        clickedCell.setAttribute("style", "color: blue;");
+     }else{ 
+         clickedCell.setAttribute("style", "color: red;");
+     }   
 }
 
 function handlePlayerChange() {
@@ -81,9 +86,6 @@ function handleRestartGame() {
 }
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
 document.querySelector('.game--restart').addEventListener('click', handleRestartGame);
-
-
-
 /*
 
 = Operador de Atribuição
