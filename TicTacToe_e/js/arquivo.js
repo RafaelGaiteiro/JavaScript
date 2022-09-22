@@ -117,17 +117,14 @@ document.querySelector('.game--restart').addEventListener('click', handleRestart
     x === 10   ->   retorna true
     x === "10" ->   retorna false
 
-Assim o operador == compara por 'resultado'; Ele converte o que você quer comparar e verifica.
+-- Resumo --
 
-Ja o operador ===  compara o valor e o tipo, (quando você usa o operador === você força a comparar o tipo também) então só vai ser true se for exatamente igual (valor e tipo).
+    a = 1 é uma atribuição
 
-Assim temos:
+    b == 5 é uma comparação do valor
 
-if (true == 'true')  	// Retorna true
-if (true == '1')       	// Retorna  true
-if (true == true)    	// Retorna  true
-if (true === 'true') 	// Retorna  false
-if (true === '1')    	// Retorna  false
-if (true === true)   	// Retorna  true (igualdade estrita, mesmo tipo e mesmo valor)
+    String c = 1;
+    int d = 2;
+    c === d é uma comparação do valor e do tipo de variável
 
 */
